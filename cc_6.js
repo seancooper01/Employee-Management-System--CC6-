@@ -24,8 +24,7 @@ class Manager extends Employee {
     }
     
     describe() {
-        return `${this.name} is a manager who oversees ${this.teamSize} people 
-that work in the ${this.department} department.`
+        return `${this.name} is a manager who oversees ${this.teamSize} people that work in the ${this.department} department.`
     }
 };
 // Step 4 
@@ -37,9 +36,9 @@ const mgr2 = new Manager("Susan", "Marketing", 8)
 const mgr3 = new Manager("Victor", "Tech", 25)
 
 const people = [emp1, emp2, emp3, mgr1, mgr2, mgr3]
-for (const p of people) {
+/*for (const p of people) {
     console.log(`${p.describe()} \n`) 
-}; // test console log for the new employees and managers
+}; */ // test console log for the new employees and managers
 
 // Step 5
 class Company {
@@ -51,7 +50,8 @@ class Company {
         this.employees.push(employee);
     }
     listEmployees() {
-        console.log(`\n${this.name} Employee Directory`);
+        console.log(`\n${this.name} Employee Directory
+-----------------------------`);
         for (const person of this.employees) {
             console.log(person.describe());
             console.log(); // blank line in the console 
@@ -63,4 +63,18 @@ const testCompany = new Company("Test Inc");
 testCompany.addEmployee(emp1);
 testCompany.listEmployees();
 */ //test only 
+
+// Step 6
+const myCompany = new Company("Cooper Inc"); 
+ 
+myCompany.addEmployee(emp1);
+myCompany.addEmployee(emp2);
+myCompany.addEmployee(emp3);
+myCompany.addEmployee(mgr1);
+myCompany.addEmployee(mgr2);
+myCompany.addEmployee(mgr3);
+
+myCompany.listEmployees();
+
+//End code
 //Code goes here

@@ -54,7 +54,7 @@ class Company {
 -----------------------------`);
         for (const person of this.employees) {
             console.log(person.describe());
-            console.log(); // blank line in the console 
+            console.log(""); // blank line in the console 
         }
     }
 };

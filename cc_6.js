@@ -41,4 +41,26 @@ for (const p of people) {
     console.log(`${p.describe()} \n`) 
 }; // test console log for the new employees and managers
 
+// Step 5
+class Company {
+    constructor(name) {
+        this.name = name; 
+        this.employees = [];
+    }
+    addEmployee(employee) {
+        this.employees.push(employee);
+    }
+    listEmployees() {
+        console.log(`\n${this.name} Employee Directory`);
+        for (const person of this.employees) {
+            console.log(person.describe());
+            console.log(); // blank line in the console 
+        }
+    }
+};
+/*
+const testCompany = new Company("Test Inc");
+testCompany.addEmployee(emp1);
+testCompany.listEmployees();
+*/ //test only 
 //Code goes here
